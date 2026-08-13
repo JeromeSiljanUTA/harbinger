@@ -44,6 +44,11 @@
           users.users.root.password = "";
           services.getty.autologinUser = "root";
 
+          nix.settings.experimental-features = [
+            "nix-command"
+            "flakes"
+          ];
+
           # Packages pre-installed in the VM
           environment.systemPackages = with pkgs; [
             pi-coding-agent
@@ -64,6 +69,16 @@
             hypervisor = "qemu";
             vcpu = 1;
             mem = 500;
+
+            writableStoreOverlay = "/nix/.rw-store";
+
+            volumes = [
+              {
+                image = "nix-store-overlay.img";
+                mountPoint = "/nix/.rw-store";
+                size = 4096;
+              }
+            ];
 
             # User-mode networking — works out of the box, no tap/bridge needed
             interfaces = [
@@ -111,4 +126,3 @@
     };
   };
 }
-
