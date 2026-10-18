@@ -49,11 +49,16 @@
             "flakes"
           ];
 
+          nix.settings.build-dir = "/nix/.rw-store/build";
+
           # Packages pre-installed in the VM
           environment.systemPackages = with pkgs; [
+            bashInteractive
+
             pi-coding-agent
             ripgrep
             tree
+            git
           ];
 
           # SSH access via forwarded port
@@ -67,8 +72,8 @@
 
           microvm = {
             hypervisor = "qemu";
-            vcpu = 1;
-            mem = 500;
+            vcpu = 2;
+            mem = 4096;
 
             writableStoreOverlay = "/nix/.rw-store";
 
@@ -76,7 +81,7 @@
               {
                 image = "nix-store-overlay.img";
                 mountPoint = "/nix/.rw-store";
-                size = 4096;
+                size = 40960;
               }
             ];
 
@@ -97,15 +102,7 @@
               }
             ];
 
-            # Share the host's /nix/store read-only (avoids building a squashfs image)
             shares = [
-              {
-                proto = "9p";
-                tag = "ro-store";
-                source = "/nix/store";
-                mountPoint = "/nix/.ro-store";
-                readOnly = true;
-              }
               # Persistent workspace — bi-directional, survives VM restarts
               {
                 proto = "9p";
