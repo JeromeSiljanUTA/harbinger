@@ -13,3 +13,5 @@ QEMU
 + auto-login as root
 + automatically uses hosts' `/nix/store` (read-only)
 + `/workspace` mapped to `/home/jerome/harbinger-workspace`
++ `pi` installed from the `pi-fowler` flake input
+  (`git+http://git.nemesis.home.arpa/jerome/pi-fowler`)

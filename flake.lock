@@ -37,10 +37,31 @@
         "type": "github"
       }
     },
+    "pi-fowler": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792370961,
+        "narHash": "sha256-O8HMuUbOz6vkjYRTUElvqvRuUwqeqIbJ6Y+beOq78MM=",
+        "ref": "refs/heads/master",
+        "rev": "f3a66d37c28553cfce209f7c1c570c229a806533",
+        "revCount": 3,
+        "type": "git",
+        "url": "http://git.nemesis.home.arpa/jerome/pi-fowler"
+      },
+      "original": {
+        "type": "git",
+        "url": "http://git.nemesis.home.arpa/jerome/pi-fowler"
+      }
+    },
     "root": {
       "inputs": {
         "microvm": "microvm",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "pi-fowler": "pi-fowler"
       }
     },
     "spectrum": {

@@ -12,12 +12,17 @@
       url = "github:microvm-nix/microvm.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    pi-fowler = {
+      url = "git+http://git.nemesis.home.arpa/jerome/pi-fowler";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     microvm,
+    pi-fowler,
   }: let
     system = "x86_64-linux";
     workspaceHostPath = "/home/jerome/harbinger-workspace";
@@ -55,7 +60,7 @@
           environment.systemPackages = with pkgs; [
             bashInteractive
 
-            pi-coding-agent
+            pi-fowler.packages.${system}.default
             ripgrep
             tree
             git
