@@ -14,7 +14,6 @@
     };
     pi-fowler = {
       url = "git+http://git.nemesis.home.arpa/jerome/pi-fowler";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

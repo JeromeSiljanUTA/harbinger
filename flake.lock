@@ -37,18 +37,32 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1792094642,
+        "narHash": "sha256-zp8ToDMnqZcu4o4IH9pdwXFXGp7yLm/M0dEnNWnyd7I=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "pi-fowler": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1792370961,
-        "narHash": "sha256-O8HMuUbOz6vkjYRTUElvqvRuUwqeqIbJ6Y+beOq78MM=",
+        "lastModified": 1792420044,
+        "narHash": "sha256-gjXXMezWiLGKQsqyWGmBU/LSHQ4sGbUqeOAL+YojfqY=",
         "ref": "refs/heads/master",
-        "rev": "f3a66d37c28553cfce209f7c1c570c229a806533",
-        "revCount": 3,
+        "rev": "3b0aefde2f093a701828168afbff162608cfd968",
+        "revCount": 4,
         "type": "git",
         "url": "http://git.nemesis.home.arpa/jerome/pi-fowler"
       },
