@@ -1,5 +1,11 @@
 # HARBINGER
 
+| ![The wrecked Harbinger](harbinger.jpg) | ![Starscream at the Harbinger](starscream-at-the-harbinger.jpg) |
+|:--:|:--:|
+| The wrecked *Harbinger* in the canyon | Starscream returns to the crash site |
+
+<sub>Screenshots from *Transformers: Prime*.</sub>
+
 A microvm for agentic workflows. 
 
 ```
