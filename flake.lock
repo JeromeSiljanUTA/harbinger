@@ -58,11 +58,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1792420044,
-        "narHash": "sha256-gjXXMezWiLGKQsqyWGmBU/LSHQ4sGbUqeOAL+YojfqY=",
+        "lastModified": 1793392735,
+        "narHash": "sha256-rr0vhyudcd250zKiuG5sIQnzhlCVX1Cf/tlFymfAB0Q=",
         "ref": "refs/heads/master",
-        "rev": "3b0aefde2f093a701828168afbff162608cfd968",
-        "revCount": 4,
+        "rev": "cefa9835b1c653c73462279c985a1feaf22c7d00",
+        "revCount": 6,
         "type": "git",
         "url": "http://git.nemesis.home.arpa/jerome/pi-fowler"
       },
