@@ -89,6 +89,21 @@
               }
             ];
 
+            devices = [
+              {
+                # Match by vendor only: the ESP32 USB-Serial-JTAG changes PID
+                # when it re-enumerates into bootloader/download mode.
+                bus = "usb";
+                path = "vendorid=0x303a";
+              }
+              {
+                # Samsung phones in Odin/download mode (samloader). Vendor-only
+                # because the product ID varies by model/firmware.
+                bus = "usb";
+                path = "vendorid=0x04e8";
+              }
+            ];
+
             # User-mode networking — works out of the box, no tap/bridge needed
             interfaces = [
               {
