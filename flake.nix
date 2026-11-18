@@ -62,8 +62,14 @@
             pi-fowler.packages.${system}.default
             ripgrep
             tree
-            git
           ];
+
+          programs.git = {
+            enable = true;
+            config = {
+              safe.directory = "*";
+            };
+          };
 
           # SSH access via forwarded port
           services.openssh = {
@@ -76,8 +82,8 @@
 
           microvm = {
             hypervisor = "qemu";
-            vcpu = 2;
-            mem = 4096;
+            vcpu = 8;
+            mem = 20480;
 
             writableStoreOverlay = "/nix/.rw-store";
 
